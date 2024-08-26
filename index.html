@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+<body x-data="{ div1:false }">
+    Curso de Alpine JS
+    <button x-on:click="alert('Btn pulsado')">Boton</button>
+    <!-- Proporciona directivas como x-data y x-on:click que permiten gestionar el estado y los eventos directamente en el HTML, sin necesidad de escribir JavaScript en archivos separados. -->
+    <button @click="alert('Btn 2 pulsado')">Boton2</button>
+    <!-- @click="alert('Btn 2 pulsado')": Esta es una forma abreviada de la directiva x-on:click en Alpine.js. La directiva @click escucha el evento de clic en el botón y ejecuta el código que sigue a = cuando se hace clic. -->
+    <input @keyup.enter="alert('Has pulsado enter')">
+    <div x-data="{ div1: true }">
+        <button @click="div1 = ! div1">Toggle Content</button>
+     
+        <div 
+        
+        x-show="div1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis omnis quia minima, quasi fugiat ex voluptatum maiores voluptatibus rerum distinctio quibusdam accusantium itaque cumque tempora magnam odit in pariatur enim sed adipisci saepe illo iure? Facilis laborum deleniti officia ab?
+        </div>
+    </div>
+
+
+</body>
+</html>
